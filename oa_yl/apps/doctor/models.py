@@ -29,6 +29,9 @@ class DoctorQuality(models.Model):      # 医生相关属性模型
     is_recommend = models.BooleanField(default=False,verbose_name='是否力荐')        # 是否力荐
     text_price = models.CharField(max_length=20,verbose_name='图文问诊价格')    # 图文问诊价格
     tel_price = models.CharField(max_length=50,verbose_name='电话问诊价格')     # 电话问诊价格
+    discount = models.CharField(max_length=50,null=True,verbose_name='是否折扣')    # 问诊折扣
+    dis_num = models.IntegerField(null=True,verbose_name='折扣剩余名额')
+    new_excl = models.BooleanField(verbose_name='是否新人专享')
 
     class Meta:
         db_table = 'doctor_quality'

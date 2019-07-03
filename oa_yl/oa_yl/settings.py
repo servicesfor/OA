@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user',
-    # 'order',
     'medicine',
     'hospital',
     'doctor',
     'cart',
     'xadmin',
+    'order',
     'crispy_forms',
     'disease',
     'article'

@@ -1,12 +1,11 @@
 from django.db import models
 
-from user.models import User
 
 
 class Medicine(models.Model):
     med_name = models.CharField(max_length=200,unique=True,verbose_name='药品名')     # 药名
     med_img = models.CharField(max_length=255,verbose_name='药品图片')  # 图片
-    price = models.CharField(max_length=50,verbose_name='药品价格')             # 价格
+    price = models.FloatField(verbose_name='药品价格')             # 价格
     med_stock = models.IntegerField(verbose_name='药品库存')   # 库存
     approval_number = models.CharField(max_length=50,verbose_name='批准文号')    # 批准文号
     packing_size = models.CharField(max_length=100,verbose_name='包装规格')         # 包装规格

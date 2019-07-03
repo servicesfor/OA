@@ -23,4 +23,3 @@ class ArtProjeAdmin(object):
 xadmin.site.register(Article, ArtProjeAdmin)
 
 
-
