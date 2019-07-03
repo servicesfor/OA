@@ -18,6 +18,7 @@ class CartProjeAdmin(object):
     search_fields = ['c_user', 'c_med', 'c_med_num','c_is_select']
     list_filter = ['c_user', 'c_med', 'c_med_num','c_is_select']
     list_per_page = 20
+    site_title = '购物车管理'
 
 
 xadmin.site.register(Cart, CartProjeAdmin)

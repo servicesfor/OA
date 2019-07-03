@@ -9,6 +9,9 @@ class Order(models.Model):
     o_id = models.CharField(max_length=30,unique=True,verbose_name='订单号')
     o_user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='用户')
     o_time = models.DateTimeField(auto_now=True, null=True, verbose_name='下单时间')
+    o_consignee = models.CharField(max_length=20,null=True,verbose_name='收货人')
+    o_addr = models.CharField(max_length=200,null=True,verbose_name='收货地址')
+    o_phone = models.CharField(max_length=15,null=True,verbose_name='收货人手机号')
 
     class Meta:
         db_table = "orders"
@@ -17,11 +20,7 @@ class Order(models.Model):
 
 
 class Order_Detail(models.Model):
-
     o_order = models.ForeignKey(Order,on_delete=models.CASCADE,to_field='o_id',verbose_name='订单号')
-    o_consignee = models.CharField(max_length=20,verbose_name='收货人')
-    o_addr = models.CharField(max_length=200,verbose_name='收货地址')
-    o_phone = models.CharField(max_length=15,verbose_name='收货人手机号')
     o_goods = models.ForeignKey(Medicine,on_delete=models.CASCADE,verbose_name='订单药品')
 
 

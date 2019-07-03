@@ -10,6 +10,7 @@ class Article(models.Model):
     subjection = models.CharField(max_length=100, verbose_name='作者所属平台')  # 作者所属于平台
     title_img = models.CharField(max_length=200,null=True,verbose_name='文章图片')
     content = models.TextField(verbose_name='内容')  # 内容
+    art_class = models.CharField(max_length=50,null=True,verbose_name='文章分类')
 
     class Meta:
         db_table = 'articles'

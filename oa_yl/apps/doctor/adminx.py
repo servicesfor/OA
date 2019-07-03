@@ -16,6 +16,7 @@ class DocProjeAdmin(object):
     search_fields = ['doc_name', 'doc_title','department', 'hospital','doc_exp']
     list_filter = ['doc_name', 'doc_title','department', 'hospital','doc_exp']
     list_per_page = 20
+    site_title = '医生管理'
 
 
 xadmin.site.register(Doctor, DocProjeAdmin)
@@ -26,6 +27,7 @@ class QuaProjeAdmin(object):
     search_fields = ['d_name', 'd_level','m_answer', 'm_recipel','avg_response','is_recommend']
     list_filter = ['d_name', 'd_level','m_answer', 'm_recipel','avg_response','is_recommend']
     list_per_page = 20
+    site_title = '医生属性管理'
 
 
 xadmin.site.register(DoctorQuality, QuaProjeAdmin)
