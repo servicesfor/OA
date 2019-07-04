@@ -3,9 +3,12 @@ from user.models import User,Patient
 from user.forms import UserForm
 # Register your models here.
 
+
 class UserAdmin():
     form = UserForm
-    list_display = ['phone','create_time','update_time']
+    list_display = ['phone','create_time','update_time','nick_name','sex','activated']
+    search_fields = ['phone','create_time','update_time','nick_name','sex','activated']
+    list_filter = ['phone','create_time','update_time','nick_name','sex','activated']
     list_per_page = 20
     site_title = '用户管理'
 

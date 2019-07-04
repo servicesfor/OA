@@ -67,7 +67,7 @@ class Doc_adv(models.Model):   # 用户对医生问诊表   相当于我的问�
 
 class Focus_doc(models.Model):  # 用户关注医生表
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # 关联用户,关注医生
-    arc = models.ForeignKey(Doctor, on_delete=models.CASCADE)  # 关联文章,被关注者
+    doc = models.ForeignKey(Doctor, on_delete=models.CASCADE)  # 关联文章,被关注者
 
     class Meta:
         db_table = 'focus_doc'

@@ -8,12 +8,12 @@ class User(models.Model):
     update_time = models.DateTimeField(auto_now=True,null=True,verbose_name='更新时间')
     note = models.CharField(max_length=50,
                             blank=True,
-                            null=True)      # 备注
-    nick_name = models.CharField(max_length=16)  # 用户昵称
-    phone = models.CharField(max_length=15,unique=True)  # 用户手机号
-    sex = models.CharField(max_length=2,null=True)  # 性别
-    photo = models.CharField(max_length=255,null=True,verbose_name='头像')    #用户头像
-    activated = models.IntegerField(null=True)  # 用户激活状态
+                            null=True,verbose_name='备注')      # 备注
+    nick_name = models.CharField(max_length=16,verbose_name='昵称')  # 用户昵称
+    phone = models.CharField(max_length=15,unique=True,verbose_name='注册手机号')  # 用户手机号
+    sex = models.CharField(max_length=2,null=True,verbose_name='性别')  # 性别
+    photo = models.CharField(max_length=700,null=True,verbose_name='头像')    #用户头像
+    activated = models.IntegerField(null=True,verbose_name='激活状态')  # 用户激活状态
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

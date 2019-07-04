@@ -10,9 +10,9 @@ class Basesetting(object):
 
 # 药品管理
 class MedProjeAdmin(object):
-    list_display = ('med_name', 'price','med_stock', 'approval_number','packing_size','med_formulation')
-    search_fields = ['med_name', 'price','med_stock', 'approval_number','packing_size','med_formulation']
-    list_filter = ['med_name', 'price','med_stock', 'approval_number','packing_size','med_formulation']
+    list_display = ('med_name','med_img', 'price','med_stock', 'approval_number','packing_size','med_formulation')
+    search_fields = ['med_name','med_img', 'price','med_stock', 'approval_number','packing_size','med_formulation']
+    list_filter = ['med_name','med_img', 'price','med_stock', 'approval_number','packing_size','med_formulation']
     list_per_page = 20
     site_title = '药品管理'
 
@@ -21,9 +21,9 @@ xadmin.site.register(Medicine, MedProjeAdmin)
 
 
 class DetProjeAdmin(object):
-    list_display = ('med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions')
-    search_fields = ['med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions']
-    list_filter = ['med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions']
+    list_display = ('med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions','taboo','reaction','storage')
+    search_fields = ['med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions','taboo','reaction','storage']
+    list_filter = ['med_name', 'composition','shape', 'indications','pdc_date','validity_period','manufacturer','attentions','taboo','reaction','storage']
     list_per_page = 20
     site_title = '药品详情管理'
 

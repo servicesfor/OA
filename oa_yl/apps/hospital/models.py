@@ -34,7 +34,7 @@ class Province(models.Model):      # 医院所属省份模型
 
 class City(models.Model):           # 医院所属城市模型
     city_name = models.CharField(max_length=15,verbose_name='城市')
-    pro_name = models.ForeignKey(Province,to_field='pro_name',on_delete=models.CASCADE,verbose_name='城市所在省份')
+    pro_name = models.ForeignKey(Province,on_delete=models.CASCADE,verbose_name='城市所在省份')
 
     class Meta:
         db_table = 'cities'
