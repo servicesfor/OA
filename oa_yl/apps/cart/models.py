@@ -14,5 +14,5 @@ class Cart(models.Model):   # 购物车模型
 
     class Meta:
         db_table = 'carts'
-        verbose_name = '订单表'
+        verbose_name = '购物车表'
         verbose_name_plural = verbose_name
